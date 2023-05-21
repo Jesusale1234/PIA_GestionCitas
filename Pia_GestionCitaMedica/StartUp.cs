@@ -1,4 +1,6 @@
-﻿namespace Pia_GestionCitaMedica
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Pia_GestionCitaMedica
 {
     public class StartUp
     {
@@ -12,6 +14,12 @@
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+            services.AddAutoMapper(typeof(StartUp));
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("defaultConnection"));
+            });
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

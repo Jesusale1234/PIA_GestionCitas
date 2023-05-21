@@ -1,9 +1,11 @@
-﻿namespace Pia_GestionCitaMedica.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Pia_GestionCitaMedica.Entidades
 {
     //Diseño de la tabla Medico
     public class Medico
     {
-        public int Id_Medico { get; set; }
+        [Key] public int Id_Medico { get; set; }
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public string Especialidad { get; set; }
