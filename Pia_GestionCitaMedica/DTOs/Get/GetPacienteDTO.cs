@@ -1,6 +1,15 @@
-﻿namespace Pia_GestionCitaMedica.DTOs.Get
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Pia_GestionCitaMedica.DTOs.Get
 {
     public class GetPacienteDTO
     {
+        [Key] public int Id_Paciente { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Edad { get; set; }
+        public string Telefono { get; set; }
+        public string Correo { get; set; }
+        public string Contra { get; set; }
     }
 }

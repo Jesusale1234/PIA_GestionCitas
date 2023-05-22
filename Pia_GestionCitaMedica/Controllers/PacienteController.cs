@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Pia_GestionCitaMedica.DTOs.Get;
 using Pia_GestionCitaMedica.DTOs.Set;
 using Pia_GestionCitaMedica.Entidades;
 
@@ -20,13 +22,33 @@ namespace Pia_GestionCitaMedica.Controllers
             this.mapper = mapper;
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Post([FromBody] PacienteDTO pacienteDTO)
+        /*[HttpPost]
+        public ActionResult<List<PacienteDTO>> Get()
         {
-            var paciente = mapper.Map<PacienteDTO>(pacienteDTO);
-            dbContext.Add(paciente);
-            await dbContext.SaveChangesAsync();
-            return Ok();
+            return new List<PacienteDTO>()
+            {
+                dbContext. PacienteDTO {Id_Paciente=1, Nombre="Jesus",Apellido="Martinez",Edad=19,Telefono="8119336677",Correo="jesus123@gmail.com",Contra="Jesusale123"}
+            };
+        }*/
+
+        [HttpGet("GetAll")]
+        public async Task<ActionResult<List<GetPacienteDTO>>> GetAll()
+        {
+            logger.LogInformation("Obteniendo Lista de Pacientes...");
+            var paciente = await dbContext.Pacientes.ToListAsync();
+            return mapper.Map<List<GetPacienteDTO>>(paciente);
         }
+
+         [HttpPost]
+         public async Task<ActionResult> Post([FromBody] PacienteDTO pacienteDTO)
+         {
+             var paciente = mapper.Map<Paciente>(pacienteDTO);
+             dbContext.Add(paciente);
+             await dbContext.SaveChangesAsync();
+             return Ok();
+         }
+
+
     }
 }
+

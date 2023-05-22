@@ -9,6 +9,6 @@ namespace Pia_GestionCitaMedica.DTOs.Get
         public int Id_Paciente { get; set; }
 
         [Required]
-        public DateOnly Fecha { get; set; }
+        public DateTime Fecha { get; set; }
     }
 }
