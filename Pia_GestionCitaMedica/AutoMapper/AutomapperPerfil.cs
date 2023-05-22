@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Pia_GestionCitaMedica.DTOs;
 using Pia_GestionCitaMedica.DTOs.Get;
 using Pia_GestionCitaMedica.DTOs.Set;
 using Pia_GestionCitaMedica.Entidades;
@@ -12,11 +13,14 @@ namespace Pia_GestionCitaMedica.AutoMapper
             //SET
             CreateMap<CitaDTO, Cita>();
             CreateMap<PacienteDTO, Paciente>();
+            CreateMap<MedicoDTO, Medico>();
+            CreateMap<CredencialesUsuario, CuentasLogin>();
 
 
             //GET
             CreateMap<Cita, GetCitaDTO>();
             CreateMap<Paciente, GetPacienteDTO>();
+            CreateMap<Medico, GetMedicoDTO>();
         }
     }
 }

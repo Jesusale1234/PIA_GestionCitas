@@ -31,7 +31,7 @@ namespace Pia_GestionCitaMedica.Controllers
             };
         }*/
 
-        [HttpGet("GetAll")]
+        [HttpGet("Todos")]
         public async Task<ActionResult<List<GetPacienteDTO>>> GetAll()
         {
             logger.LogInformation("Obteniendo Lista de Pacientes...");
@@ -39,7 +39,7 @@ namespace Pia_GestionCitaMedica.Controllers
             return mapper.Map<List<GetPacienteDTO>>(paciente);
         }
 
-         [HttpPost]
+        [HttpPost("Registrar")]
          public async Task<ActionResult> Post([FromBody] PacienteDTO pacienteDTO)
          {
              var paciente = mapper.Map<Paciente>(pacienteDTO);

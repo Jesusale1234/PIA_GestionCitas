@@ -6,8 +6,10 @@ namespace Pia_GestionCitaMedica.Entidades
     public class Cita
     {
         [Key] public int Id_Cita { get; set; }
-        public int Id_Medico { get; set; }
-        public int Id_Paciente { get; set; }
+        public int IdMedico { get; set; }
+        public Medico Medico { get; set; }
+        public int IdPaciente { get; set; }
+        public Paciente Paciente { get; set; }
         public DateTime Fecha { get; set; } 
     }
 }

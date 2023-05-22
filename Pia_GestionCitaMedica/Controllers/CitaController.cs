@@ -26,7 +26,7 @@ namespace Pia_GestionCitaMedica.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] CitaDTO citaDTO)
         {
-            var PacienteExiste = await dbContext.Citas.AnyAsync(x => x.Id_Paciente == citaDTO.Id_Paciente);
+            var PacienteExiste = await dbContext.Citas.AnyAsync(x => x.IdPaciente == citaDTO.Id_Paciente);
             if (!PacienteExiste)
             {
                 return BadRequest("El paciente no existe");

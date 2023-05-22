@@ -1,8 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Pia_GestionCitaMedica.DTOs.Set
+﻿namespace Pia_GestionCitaMedica.DTOs.Get
 {
-    public class MedicoDTO
+    public class GetMedicoDTO
     {
         public string Nombre { get; set; }
         public int Edad { get; set; }
