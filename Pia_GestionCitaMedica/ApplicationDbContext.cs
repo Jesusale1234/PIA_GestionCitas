@@ -20,15 +20,18 @@ namespace Pia_GestionCitaMedica
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Medico>()
                 .HasMany(x => x.Citas)
                 .WithOne(x => x.Medico)
-                .HasForeignKey(x => x.IdMedico)
+                .HasForeignKey(x => x.Id_Medico)
                 .HasPrincipalKey(x => x.Id_Medico);
+                
             modelBuilder.Entity<Paciente>()
                 .HasMany(x => x.Citas)
                 .WithOne(x => x.Paciente)
-                .HasForeignKey(x => x.IdPaciente)
+                .HasForeignKey(x => x.Id_Paciente)
                 .HasPrincipalKey(x => x.Id_Paciente);
         }
     }

@@ -10,7 +10,8 @@ namespace Pia_GestionCitaMedica.Entidades
         public string Apellido { get; set; }
         public int Edad { get; set; }
         public string Telefono { get; set; }
-        
+        public int Id_InfoMedica { get; set; }
+        public InfoMedica InfoMedica { get; set; }
         public ICollection<Cita> Citas { get; }
     }
 }

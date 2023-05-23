@@ -48,7 +48,6 @@ namespace Pia_GestionCitaMedica.Controllers
              return Ok();
          }
 
-
     }
 }
 

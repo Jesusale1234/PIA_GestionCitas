@@ -15,6 +15,7 @@ namespace Pia_GestionCitaMedica.AutoMapper
             CreateMap<PacienteDTO, Paciente>();
             CreateMap<MedicoDTO, Medico>();
             CreateMap<CredencialesUsuario, CuentasLogin>();
+            CreateMap<InfoMedicaDTO, InfoMedica>();
 
 
             //GET
