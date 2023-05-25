@@ -10,7 +10,5 @@ namespace Pia_GestionCitaMedica.Entidades
         [Required]
         public int Altura { get; set; }
         public string EnfermedadesAnt { get;  set; }
-
-        public ICollection<Paciente> Pacientes { get; set; }
     }
 }

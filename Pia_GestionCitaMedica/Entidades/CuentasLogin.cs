@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
+using Pia_GestionCitaMedica.Validaciones;
 
 namespace Pia_GestionCitaMedica.Entidades
 {
@@ -14,7 +15,9 @@ namespace Pia_GestionCitaMedica.Entidades
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+
         [Required]
+        [ValidarRol]
         public string Role { get; set; }
     }
 }

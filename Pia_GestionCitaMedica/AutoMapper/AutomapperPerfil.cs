@@ -22,6 +22,7 @@ namespace Pia_GestionCitaMedica.AutoMapper
             CreateMap<Cita, GetCitaDTO>();
             CreateMap<Paciente, GetPacienteDTO>();
             CreateMap<Medico, GetMedicoDTO>();
+            CreateMap<InfoMedica, GetInfoMedicaDTO>();
         }
     }
 }

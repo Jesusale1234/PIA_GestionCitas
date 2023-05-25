@@ -243,7 +243,7 @@ namespace Pia_GestionCitaMedica.Migrations
 
                     b.HasIndex("Id_Paciente");
 
-                    b.ToTable("Citas");
+                    b.ToTable("Citas", (string)null);
                 });
 
             modelBuilder.Entity("Pia_GestionCitaMedica.Entidades.CuentasLogin", b =>
@@ -273,7 +273,7 @@ namespace Pia_GestionCitaMedica.Migrations
 
                     b.HasIndex("CuentaId");
 
-                    b.ToTable("CuentasLogins");
+                    b.ToTable("CuentasLogins", (string)null);
                 });
 
             modelBuilder.Entity("Pia_GestionCitaMedica.Entidades.InfoMedica", b =>
@@ -295,7 +295,7 @@ namespace Pia_GestionCitaMedica.Migrations
 
                     b.HasKey("Id_InfoMedica");
 
-                    b.ToTable("InfoMedica");
+                    b.ToTable("InfoMedica", (string)null);
                 });
 
             modelBuilder.Entity("Pia_GestionCitaMedica.Entidades.Medico", b =>
@@ -317,7 +317,7 @@ namespace Pia_GestionCitaMedica.Migrations
 
                     b.HasKey("Id_Medico");
 
-                    b.ToTable("Medicos");
+                    b.ToTable("Medicos", (string)null);
                 });
 
             modelBuilder.Entity("Pia_GestionCitaMedica.Entidades.Paciente", b =>
@@ -350,7 +350,7 @@ namespace Pia_GestionCitaMedica.Migrations
 
                     b.HasIndex("InfoMedicaId_InfoMedica");
 
-                    b.ToTable("Pacientes");
+                    b.ToTable("Pacientes", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

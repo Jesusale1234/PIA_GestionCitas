@@ -18,6 +18,8 @@ namespace Pia_GestionCitaMedica
         public DbSet<Paciente> Pacientes { get; set; }
         public DbSet<CuentasLogin> CuentasLogins { get; set; }
 
+        public DbSet<InfoMedica> InfoMedicas { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

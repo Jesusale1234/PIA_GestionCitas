@@ -42,7 +42,7 @@ namespace Pia_GestionCitaMedica
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIAlumnos", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PIA Gestion de Citas", Version = "v1" });
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {

@@ -13,7 +13,7 @@ namespace Pia_GestionCitaMedica.Controllers
 {
     [ApiController]
     [Route("Login")]
-    public class MedicoLoginController : ControllerBase
+    public class LoginController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
         private readonly ILogger<CitaController> logger;
@@ -22,7 +22,7 @@ namespace Pia_GestionCitaMedica.Controllers
         private readonly IConfiguration configuration;
         private readonly SignInManager<IdentityUser> signInManager;
 
-        public MedicoLoginController(UserManager<IdentityUser> userManager, IConfiguration configuration,
+        public LoginController(UserManager<IdentityUser> userManager, IConfiguration configuration,
             SignInManager<IdentityUser> signInManager, ApplicationDbContext dbContext, IMapper mapper)
         {
             this.userManager = userManager;
